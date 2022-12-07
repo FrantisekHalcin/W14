@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulacka</title>
+
+    <style>
+        form {
+            width: 320px;
+            height: auto;
+            margin: auto;
+            border-radius: 15px;
+            padding: 15px;
+            background-image: linear-gradient(to bottom, rgb(90, 182, 93), rgb(5, 74, 8));
+
+        }
+
+        body {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        button {
+            display: block;
+            background-color: rgb(105, 28, 3);
+            color: aliceblue;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: xx-large;
+            width: 90px;
+
+        }
+
+        button:hover {
+            background-color: rgb(185, 20, 20);
+        }
+
+        #sumar {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        p {
+            text-align: center;
+
+        }
+
+        #last5 {
+            display: block;
+        }
+
+
+        input {
+            width: 80px;
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            text-align: right;
+            margin: auto;
+            text-shadow: 2px 1px 2px rgb(65, 65, 68);
+        }
+
+        .ps {
+            text-align: left;
+        }
+
+        select {
+            width: 90px;
+        }
+
+        option {
+            text-align: center;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 4px rgb(65, 65, 68);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <form>
+        <h1>Kalkulačka</h1>
+        <table>
+            <tr>
+                <td><label for="cislo1">Číslo:</label></td>
+                <td class="ps"> <input type="number" id="cislo1" name="cislo1"></td>
+            </tr>
+
+
+            <tr>
+                <td>Operácia:</td>
+                <td class="ps"><select name="operacia" id="operacia">
+                        <option value="plus">plus (+)</option>
+                        <option value="minus">mínus (-)</option>
+                        <option value="multiply">krát (*)</option>
+                        <option value="divide">deleno (/)</option>
+                    </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="cislo1">Číslo:</label></td>
+                <td class="ps"><input type="number" id="cislo2" name="cislo2"></td>
+            </tr>
+
+
+
+            <tr>
+                <td></td>
+                <td><button type="button" onclick="vypocitaj(event)">=</button></td>
+            </tr>
+
+            <tr>
+                <td><label for="cislo1">Výsledok:</label></td>
+                <td class="ps"><input type="text" id="vysledok" readonly></td>
+            </tr>
+        </table>
+        <div id="sumar">
+            <hr>
+            Posledných 5 operácií: <p id="last5"></p>
+        </div>
+
+    </form>
+
+    <script src="./vypocet.js"></script>
+
+</body>
+
+</html>
