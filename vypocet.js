@@ -21,9 +21,9 @@ for (let i = 0; i < history.length; i++) {
 
 function vypocitaj() {
 
-    let cislo1 = parseInt(document.getElementById("cislo1").value);
+    let cislo1 = parseFloat(document.getElementById("cislo1").value);
 
-    let cislo2 = parseInt(document.getElementById("cislo2").value);
+    let cislo2 = parseFloat(document.getElementById("cislo2").value);
 
     let operacia = document.getElementById("operacia").value;
 
